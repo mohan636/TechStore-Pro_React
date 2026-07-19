@@ -1,8 +1,18 @@
 export const priceRanges = [
   { value: "all", label: "All Prices" },
   { value: "under-50000", label: "Under ₹50,000", min: 0, max: 50000 },
-  { value: "50000-150000", label: "₹50,000 - ₹150,000", min: 50000, max: 150000 },
-  { value: "above-150000", label: "Above ₹150,000", min: 150000, max: Infinity },
+  {
+    value: "50000-150000",
+    label: "₹50,000 - ₹150,000",
+    min: 50000,
+    max: 150000,
+  },
+  {
+    value: "above-150000",
+    label: "Above ₹150,000",
+    min: 150000,
+    max: Infinity,
+  },
 ];
 
 export const sortOptions = [
@@ -13,7 +23,9 @@ export const sortOptions = [
 ];
 
 export function getUniqueValues(items, key) {
-  return Array.from(new Set(items.map((item) => item[key]).filter(Boolean))).sort();
+  return Array.from(
+    new Set(items.map((item) => item[key]).filter(Boolean)),
+  ).sort();
 }
 
 export function filterProducts(products, filters) {
@@ -26,7 +38,9 @@ export function filterProducts(products, filters) {
   } = filters;
 
   const lowerSearch = searchTerm.trim().toLowerCase();
-  const priceFilter = priceRanges.find((range) => range.value === selectedPrice);
+  const priceFilter = priceRanges.find(
+    (range) => range.value === selectedPrice,
+  );
 
   return products
     .filter((product) => {

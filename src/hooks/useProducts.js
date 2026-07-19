@@ -1,6 +1,11 @@
 import { useState, useEffect, useMemo } from "react";
 import productsData from "../data";
-import { filterProducts, getUniqueValues, priceRanges, sortOptions } from "../utils/productFilters";
+import {
+  filterProducts,
+  getUniqueValues,
+  priceRanges,
+  sortOptions,
+} from "../utils/productFilters";
 
 export function useProducts(filters) {
   const [allProducts, setAllProducts] = useState([]);

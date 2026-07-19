@@ -44,7 +44,9 @@ export default function ProductCard({
       </div>
 
       <div className="card-content">
-        <p className="product-meta">{brand} · {category}</p>
+        <p className="product-meta">
+          {brand} · {category}
+        </p>
         <h3 className="product-name">{name}</h3>
 
         <div className="rating">

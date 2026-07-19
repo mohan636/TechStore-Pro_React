@@ -1,8 +1,4 @@
-import {
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { Suspense, lazy, useEffect } from "react";
 import "./App.css";
 import { ShopProvider } from "./context/ShopContext";

@@ -50,7 +50,9 @@ export function ShopProvider({ children }) {
 
     const timer = window.setTimeout(() => {
       setToasts((prev) => prev.filter((toast) => toast.id !== id));
-      toastTimers.current = toastTimers.current.filter((item) => item !== timer);
+      toastTimers.current = toastTimers.current.filter(
+        (item) => item !== timer,
+      );
     }, 3200);
 
     toastTimers.current.push(timer);
@@ -82,27 +84,33 @@ export function ShopProvider({ children }) {
     [showToast, setCartItems],
   );
 
-  const increaseQuantity = useCallback((productId) => {
-    setCartItems((prev) =>
-      prev.map((item) =>
-        item.id === productId
-          ? { ...item, quantity: item.quantity + 1 }
-          : item,
-      ),
-    );
-  }, [setCartItems]);
-
-  const decreaseQuantity = useCallback((productId) => {
-    setCartItems((prev) =>
-      prev
-        .map((item) =>
+  const increaseQuantity = useCallback(
+    (productId) => {
+      setCartItems((prev) =>
+        prev.map((item) =>
           item.id === productId
-            ? { ...item, quantity: item.quantity - 1 }
+            ? { ...item, quantity: item.quantity + 1 }
             : item,
-        )
-        .filter((item) => item.quantity > 0),
-    );
-  }, [setCartItems]);
+        ),
+      );
+    },
+    [setCartItems],
+  );
+
+  const decreaseQuantity = useCallback(
+    (productId) => {
+      setCartItems((prev) =>
+        prev
+          .map((item) =>
+            item.id === productId
+              ? { ...item, quantity: item.quantity - 1 }
+              : item,
+          )
+          .filter((item) => item.quantity > 0),
+      );
+    },
+    [setCartItems],
+  );
 
   const removeFromCart = useCallback(
     (productId) => {
@@ -173,7 +181,8 @@ export function ShopProvider({ children }) {
   );
 
   const cartTotal = useMemo(
-    () => cartItems.reduce((total, item) => total + item.price * item.quantity, 0),
+    () =>
+      cartItems.reduce((total, item) => total + item.price * item.quantity, 0),
     [cartItems],
   );
 

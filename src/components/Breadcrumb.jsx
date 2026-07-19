@@ -13,7 +13,9 @@ export default function Breadcrumb({ items }) {
             ) : (
               <span className="breadcrumb-current">{item.label}</span>
             )}
-            {index < items.length - 1 && <span className="breadcrumb-separator">/</span>}
+            {index < items.length - 1 && (
+              <span className="breadcrumb-separator">/</span>
+            )}
           </li>
         ))}
       </ol>

@@ -14,7 +14,9 @@ function readValue(key, fallback) {
 }
 
 export function useLocalStorage(key, initialValue) {
-  const [storedValue, setStoredValue] = useState(() => readValue(key, initialValue));
+  const [storedValue, setStoredValue] = useState(() =>
+    readValue(key, initialValue),
+  );
 
   useEffect(() => {
     try {
