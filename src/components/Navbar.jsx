@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useShop } from "../context/ShopContext";
 
@@ -44,11 +45,11 @@ function MoonIcon() {
 }
 
 export default function Navbar() {
+  const [mobileOpen, setMobileOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const {
     cartCount,
-    wishlistItems,
     wishlistCount,
     theme,
     toggleTheme,
@@ -66,6 +67,7 @@ export default function Navbar() {
   };
 
   const handleNavLink = (label) => {
+    setMobileOpen(false);
     if (label === "Products") {
       scrollToProducts();
     } else {
@@ -76,40 +78,38 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <Link to="/" className="logo">
+        <Link to="/" className="logo" onClick={() => setMobileOpen(false)}>
           <span className="logo-icon" aria-hidden="true" />
           TechStore
         </Link>
 
-        <ul className="nav-links">
-          <li>
-            <button
-              type="button"
-              className="nav-link"
-              onClick={() => handleNavLink("Products")}
-            >
-              Products
-            </button>
-          </li>
-          <li>
-            <button
-              type="button"
-              className="nav-link"
-              onClick={() => handleNavLink("Deals")}
-            >
-              Deals
-            </button>
-          </li>
-          <li>
-            <button
-              type="button"
-              className="nav-link"
-              onClick={() => handleNavLink("About")}
-            >
-              About
-            </button>
-          </li>
-        </ul>
+        <button
+          type="button"
+          className={`mobile-menu-toggle ${mobileOpen ? "active" : ""}`}
+          onClick={() => setMobileOpen((state) => !state)}
+          aria-label="Toggle mobile navigation"
+          aria-expanded={mobileOpen}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        <div className={`nav-menu ${mobileOpen ? "open" : ""}`}>
+          <ul className="nav-links">
+            {[
+              { label: "Products" },
+              { label: "Deals" },
+              { label: "About" },
+            ].map((item) => (
+              <li key={item.label}>
+                <button type="button" className="nav-link" onClick={() => handleNavLink(item.label)}>
+                  {item.label}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
 
         <div className="nav-actions">
           <button
@@ -125,25 +125,27 @@ export default function Navbar() {
           <button
             type="button"
             className="nav-icon-btn wishlist-nav-btn"
-            onClick={() => setIsWishlistOpen(true)}
+            onClick={() => {
+              setIsWishlistOpen(true);
+              setMobileOpen(false);
+            }}
             aria-label={`Wishlist, ${wishlistCount} items`}
           >
             <HeartIcon />
-            {wishlistCount > 0 && (
-              <span className="nav-badge">{wishlistCount}</span>
-            )}
+            {wishlistCount > 0 && <span className="nav-badge">{wishlistCount}</span>}
           </button>
 
           <button
             type="button"
             className="nav-icon-btn cart-nav-btn"
-            onClick={() => setIsCartOpen(true)}
+            onClick={() => {
+              setIsCartOpen(true);
+              setMobileOpen(false);
+            }}
             aria-label={`Cart, ${cartCount} items`}
           >
             <CartIcon />
-            {cartCount > 0 && (
-              <span className="nav-badge">{cartCount}</span>
-            )}
+            {cartCount > 0 && <span className="nav-badge">{cartCount}</span>}
           </button>
         </div>
       </div>

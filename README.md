@@ -1,16 +1,95 @@
-# React + Vite
+﻿# TechStore Pro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React e-commerce storefront built with Vite. This project is a polished upgrade of a tech merch shop with a strong resume-ready structure, reusable components, responsive design, and shopping cart features.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+TechStore Pro is a front-end shopping experience for premium consumer electronics. It includes product discovery, search, filtering, sorting, a product details page, cart management, wishlist support, and a polished user interface.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Product search and advanced filtering
+- Category, brand, and price range filters
+- Sort by price, rating, or newest arrivals
+- Product details page with breadcrumbs and recent views
+- Add to cart, quantity controls, remove items
+- Wishlist with add/remove actions
+- Cart and wishlist drawers with responsive navigation
+- Persistent cart, wishlist, theme, and recently viewed saved in localStorage
+- Dark/light theme toggle
+- Load more pagination for product grid
+- Toast notifications and scroll-to-top button
+- Loading and empty states with clear feedback
+- Responsive layout for mobile, tablet, and desktop
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React.js
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- Vite
+- React Router DOM
+
+## Folder Structure
+
+```text
+src/
+  assets/
+    image-fallback.svg
+  components/
+    Breadcrumb.jsx
+    CartDrawer.jsx
+    LoadingSpinner.jsx
+    Navbar.jsx
+    ProductCard.jsx
+    ScrollToTopButton.jsx
+    ToastContainer.jsx
+    WishlistDrawer.jsx
+  context/
+    ShopContext.jsx
+  hooks/
+    useLocalStorage.js
+    useProducts.js
+  pages/
+    Checkout.jsx
+    Home.jsx
+    OrderSuccess.jsx
+    ProductDetails.jsx
+  utils/
+    format.js
+    productFilters.js
+  data.js
+  App.jsx
+  App.css
+  main.jsx
+  index.css
+```
+
+## Installation
+
+```bash
+cd "D:\React Tap\latest"
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173` to view the app locally.
+
+## Build
+
+```bash
+npm run build
+```
+
+## Screenshots
+
+![Homepage](https://via.placeholder.com/900x450?text=TechStore+Pro+Homepage)
+
+![Product details](https://via.placeholder.com/900x450?text=Product+Details+Page)
+
+![Cart drawer](https://via.placeholder.com/900x450?text=Cart+Drawer)
+
+## Notes
+
+This project keeps the existing React and JavaScript stack and focuses on improving component reusability, state management, performance, and user experience without adding new frameworks or TypeScript.

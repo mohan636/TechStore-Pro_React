@@ -10,6 +10,7 @@ const products = [
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Desktops/Images/311754_0_p4etiv.png",
     isBestSeller: true,
     brand: "Apple",
+    category: "Desktop",
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ const products = [
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Communication/Mobiles/Images/317417_0_7ISiBcc4Y.png?updatedAt=1757529273198",
     isBestSeller: true,
     brand: "Apple",
+    category: "Smartphone",
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ const products = [
       "https://media.tatacroma.com/Croma%20Assets/Communication/Mobiles/Images/313337_0_fabi1f.png",
     isBestSeller: true,
     brand: "Samsung",
+    category: "Smartphone",
   },
   {
     id: 4,
@@ -46,6 +49,7 @@ const products = [
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Laptop/Images/302731_hnoewu.png?tr=w-400",
     isBestSeller: true,
     brand: "Apple",
+    category: "Laptop",
   },
   {
     id: 5,
@@ -58,6 +62,7 @@ const products = [
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Tablets%20and%20iPads/Images/275409_0_jqh8ia.png?tr=w-400",
     isBestSeller: false,
     brand: "Samsung",
+    category: "Tablet",
   },
   {
     id: 6,
@@ -70,6 +75,7 @@ const products = [
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Communication/Headphones%20And%20Earphones/Images/319023_0_FBVNN-hQOV.png?updatedAt=1758793608627",
     isBestSeller: true,
     brand: "Sony",
+    category: "Audio",
   },
   {
     id: 7,
@@ -82,6 +88,7 @@ const products = [
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/301165_0_rmd0hf.png?tr=w-400",
     isBestSeller: true,
     brand: "Apple",
+    category: "Audio",
   },
   {
     id: 8,
@@ -94,6 +101,7 @@ const products = [
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Entertainment/Television/Images/315370_0_m2julo.png?tr=w-400",
     isBestSeller: false,
     brand: "Samsung",
+    category: "TV",
   },
   {
     id: 9,
@@ -106,6 +114,7 @@ const products = [
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Tablets%20and%20iPads/Images/305985_0_PrlpyhdYd.png?updatedAt=1762776825006",
     isBestSeller: true,
     brand: "Sony",
+    category: "Gaming",
   },
   {
     id: 10,
@@ -118,6 +127,7 @@ const products = [
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Communication/Wearable%20Devices/Images/317516_0_D4_wyuvxYG.png?updatedAt=1757600981868",
     isBestSeller: false,
     brand: "Apple",
+    category: "Wearable",
   },
   {
     id: 11,
@@ -130,6 +140,7 @@ const products = [
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Communication/Wearable%20Devices/Images/316946_0_fmSmQ2JHk.png?updatedAt=1763650370270",
     isBestSeller: false,
     brand: "Samsung",
+    category: "Wearable",
   },
   {
     id: 12,
@@ -142,6 +153,7 @@ const products = [
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Imaging/Camera%20and%20Camcorders/Images/303425_0_Xo4POLg9J.png?updatedAt=1754895228816",
     isBestSeller: true,
     brand: "Sony",
+    category: "Camera",
   },
   {
     id: 13,
@@ -154,6 +166,7 @@ const products = [
       "https://media-ik.croma.com/Croma%20Assets/Communication/Mobiles/Images/319655_0_2J1rRcr_h.png?updatedAt=1765888042925&tr=w-400",
     isBestSeller: true,
     brand: "OnePlus",
+    category: "Smartphone",
   },
   {
     id: 14,
@@ -166,6 +179,7 @@ const products = [
       "https://media-ik.croma.com/Croma%20Assets/Communication/Mobiles/Images/323355_0_xLO7TmFsp.png?updatedAt=1780302850503&tr=w-400",
     isBestSeller: false,
     brand: "Xiaomi",
+    category: "Smartphone",
   },
   {
     id: 15,
@@ -177,6 +191,7 @@ const products = [
     image: "https://media-ik.croma.com/Croma%20Assets/Computers%20Peripherals/Laptop/Images/308579_0_JBTcieUpoa.png?updatedAt=1763299466919&tr=w-400",
     isBestSeller: true,
     brand: "Dell",
+    category: "Laptop",
   },
   {
     id: 16,
@@ -189,6 +204,7 @@ const products = [
       "https://media-ik.croma.com/Croma%20Assets/Computers%20Peripherals/Laptop/Images/323523_0_cJtKmZU2K.png?updatedAt=1780047597965&tr=w-400",
     isBestSeller: false,
     brand: "HP",
+    category: "Laptop",
   },
   {
     id: 17,
@@ -201,6 +217,7 @@ const products = [
       "https://media-ik.croma.com/Croma%20Assets/Computers%20Peripherals/Laptop/Images/314538_0_SaekaUa4-.png?updatedAt=1763015570423&tr=w-400",
     isBestSeller: true,
     brand: "Lenovo",
+    category: "Laptop",
   },
   {
     id: 18,
@@ -213,6 +230,7 @@ const products = [
       "https://media-ik.croma.com/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/305702_0_zyrrtd.png?tr=w-400",
     isBestSeller: true,
     brand: "Bose",
+    category: "Audio",
   },
   {
     id: 19,
@@ -225,6 +243,7 @@ const products = [
       "https://media-ik.croma.com/Croma%20Assets/Computers%20Peripherals/Computer%20Accessories%20and%20Tablets%20Accessories/Images/312098_0_j5v89y6Uq.png?updatedAt=1770706695098&tr=w-400",
     isBestSeller: true,
     brand: "Logitech",
+    category: "Accessory",
   },
   {
     id: 20,
@@ -237,6 +256,7 @@ const products = [
       "https://media-ik.croma.com/Croma%20Assets/Computers%20Peripherals/Computer%20Accessories%20and%20Tablets%20Accessories/Images/302591_0_boeouv.png?tr=w-400",
     isBestSeller: false,
     brand: "Logitech",
+    category: "Accessory",
   },
   {
     id: 21,
@@ -249,6 +269,7 @@ const products = [
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Tablets%20and%20iPads/Images/275409_0_jqh8ia.png?tr=w-400",
     isBestSeller: true,
     brand: "Apple",
+    category: "Tablet",
   },
   {
     id: 22,
@@ -261,6 +282,7 @@ const products = [
       "https://media-ik.croma.com/Croma%20Assets/Communication/Headphones%20and%20Earphones/Images/321823_0_wrxGbuSZQ.png?updatedAt=1772202502084&tr=w-400",
     isBestSeller: false,
     brand: "Samsung",
+    category: "Audio",
   },
   {
     id: 23,
@@ -273,6 +295,7 @@ const products = [
       "https://media-ik.croma.com/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/308632_0_cd1CAx-eu.png?updatedAt=1763650557191&tr=w-400",
     isBestSeller: false,
     brand: "OnePlus",
+    category: "Audio",
   },
   {
     id: 24,
@@ -285,6 +308,7 @@ const products = [
       "https://media-ik.croma.com/Croma%20Assets/Computers%20Peripherals/Tablets%20and%20iPads/Images/321316_0_RFQTs9MZf.png?updatedAt=1774252733166&tr=w-400",
     isBestSeller: false,
     brand: "Xiaomi",
+    category: "Tablet",
   },
 ];
 
